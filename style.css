@@ -98,3 +98,11 @@ h2 {
 section {
   margin-bottom: 50px;
 }
+
+ul {
+  line-height: 1.6;
+}
+
+p {
+  line-height: 1.6;
+}
