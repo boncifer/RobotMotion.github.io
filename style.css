@@ -105,7 +105,7 @@ p {
   line-height: 1.6;
 }
 
-.video-grid {
+.demo-video {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 14px;
@@ -113,7 +113,7 @@ p {
   margin: 20px auto 0;
 }
 
-.video-grid video {
+.demo-video video {
   width: 400px;
   max-height: 200px;
   object-fit: cover;
