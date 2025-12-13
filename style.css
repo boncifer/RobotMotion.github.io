@@ -105,7 +105,7 @@ p {
   line-height: 1.6;
 }
 
-.demo-video {
+.video-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 14px;
@@ -113,7 +113,7 @@ p {
   margin: 20px auto 0;
 }
 
-.demo-video video {
+.video-grid video {
   width: 400px;
   max-height: 200px;
   object-fit: cover;
@@ -121,3 +121,33 @@ p {
   background: #000;
 }
 
+/* === Single demo (RH20T-style) === */
+
+.single-demo {
+  margin: 40px 0;
+}
+
+.task-title {
+  font-size: 1rem;
+  margin-bottom: 14px;
+}
+
+.demo-video {
+  max-width: 400px;   /* key: keeps video small & focused */
+}
+
+.demo-video video {
+  width: 400px;
+  border-radius: 6px;
+  background: #000;
+}
+
+.demo-caption {
+  font-size: 0.85rem;
+  color: #555;
+  margin-top: 6px;
+}
+
+.demo-caption span {
+  font-size: 0.8rem;
+}
