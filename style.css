@@ -199,3 +199,12 @@ p {
   line-height: 1.6;
   color: #333;
 }
+
+.dataset-spec {
+  margin-top: 14px;
+  line-height: 1.6;
+}
+
+.dataset-spec li {
+  margin-bottom: 6px;
+}
