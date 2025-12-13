@@ -125,6 +125,18 @@ p {
 
 .single-demo {
   margin: 40px 0;
+  text-align: center;
+}
+
+.single-demo .task-title {
+  font-size: 1rem;
+  margin-bottom: 14px;
+}
+
+.single-demo .demo-caption {
+  font-size: 0.85rem;
+  color: #555;
+  margin-top: 6px;
 }
 
 .task-title {
@@ -142,12 +154,3 @@ p {
   background: #000;
 }
 
-.demo-caption {
-  font-size: 0.85rem;
-  color: #555;
-  margin-top: 6px;
-}
-
-.demo-caption span {
-  font-size: 0.8rem;
-}
