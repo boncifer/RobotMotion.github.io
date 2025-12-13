@@ -114,7 +114,7 @@ p {
 }
 
 .video-grid video {
-  width: 100%;
+  width: 400px;
   max-height: 200px;
   object-fit: cover;
   border-radius: 6px;
