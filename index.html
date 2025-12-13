@@ -77,6 +77,7 @@
 
 </section>
 
+    
   <section>
   <h2>Dataset Overview</h2>
 
@@ -119,6 +120,67 @@
     Overview of the RobotMotion data pipeline, illustrating the flow
     between Human videos, Simulation Data, and TeleOps.
   </p>
+</section>
+    
+<!-- Data modalities -->
+  <section>
+  <h2>Data Modalities</h2>
+
+  <p>
+    RobotMotion records multi-modal observations of real-world human behavior.
+    The listed modalities describe the signals provided by the dataset and may
+    be selectively used, downsampled, or adapted depending on the target robot
+    platform and learning method.
+  </p>
+
+  <table class="modality-table">
+    <thead>
+      <tr>
+        <th>Modality</th>
+        <th>Description</th>
+        <th>Temporal Resolution</th>
+        <th>Availability</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>RGB video</td>
+        <td>Egocentric, first-person visual observations</td>
+        <td>10–30 Hz</td>
+        <td>All recordings</td>
+      </tr>
+      <tr>
+        <td>Audio</td>
+        <td>Ambient and task-related audio signals</td>
+        <td>Optional</td>
+        <td>Subset of recordings</td>
+      </tr>
+      <tr>
+        <td>Task metadata</td>
+        <td>Task labels, episode boundaries, and annotations</td>
+        <td>Per episode</td>
+        <td>All recordings</td>
+      </tr>
+      <tr>
+        <td>Temporal segmentation</td>
+        <td>Action and sub-task boundaries</td>
+        <td>Variable</td>
+        <td>Subset of recordings</td>
+      </tr>
+      <tr>
+        <td>Environment context</td>
+        <td>Scene and object-level context information</td>
+        <td>Per episode</td>
+        <td>All recordings</td>
+      </tr>
+      <tr>
+        <td>Robot execution data</td>
+        <td>Robot actions aligned to human demonstrations</td>
+        <td>10–100 Hz</td>
+        <td>When available</td>
+      </tr>
+    </tbody>
+  </table>
 </section>
 
 
