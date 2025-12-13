@@ -89,3 +89,12 @@ footer {
 .btn:hover {
   background: #024ea2;
 }
+
+h2 {
+  border-bottom: 2px solid #eee;
+  padding-bottom: 8px;
+  margin-top: 50px;
+}
+section {
+  margin-bottom: 50px;
+}
