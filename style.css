@@ -221,3 +221,25 @@ p {
   text-align: center;
 }
 
+.modality-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+  font-size: 0.95rem;
+}
+
+.modality-table th,
+.modality-table td {
+  border: 1px solid #ddd;
+  padding: 10px 12px;
+  text-align: left;
+}
+
+.modality-table th {
+  background-color: #f3f3f3;
+  font-weight: 600;
+}
+
+.modality-table tbody tr:nth-child(even) {
+  background-color: #fafafa;
+}
