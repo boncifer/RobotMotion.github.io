@@ -1,14 +1,78 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>My GitHub Site</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RobotMotion Dataset</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <header>
-    <h1>Welcome to My Project</h1>
-    <p>This is a GitHub Pages site 😊</p>
-  </header>
+  <div class="container">
+
+    <!-- HERO -->
+    <section class="hero">
+      <h1>RobotMotion</h1>
+      <p class="subtitle">
+        A large-scale human behavior dataset for training physical AI and humanoid robots.
+      </p>
+
+      <div class="links">
+        <a href="#" target="_blank">Paper</a>
+        <a href="#" target="_blank">Dataset</a>
+        <a href="#" target="_blank">Code</a>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section>
+      <h2>About</h2>
+      <p>
+        RobotMotion is a data collection platform and dataset focused on capturing
+        real-world human actions, audio, and interactions to enable robot learning
+        and behavior imitation.
+      </p>
+    </section>
+
+    <!-- DATASET -->
+    <section>
+      <h2>Dataset</h2>
+      <ul>
+        <li>Egocentric human video</li>
+        <li>Audio + action context</li>
+        <li>Task-annotated behavior sequences</li>
+        <li>Multi-environment recordings</li>
+      </ul>
+    </section>
+
+    <!-- TASKS -->
+    <section>
+      <h2>Supported Tasks</h2>
+      <p>
+        Manipulation, navigation, daily activities, tool usage, and
+        long-horizon task execution.
+      </p>
+    </section>
+
+    <!-- CITATION -->
+    <section>
+      <h2>Citation</h2>
+      <pre>
+@misc{robotmotion2025,
+  title={RobotMotion: A Human Behavior Dataset for Physical AI},
+  author={RobotMotion Team},
+  year={2025}
+}
+      </pre>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>
+        Contact: <a href="mailto:contact@robotmotion.ai">contact@robotmotion.ai</a>
+      </p>
+    </footer>
+
+  </div>
 </body>
 </html>
