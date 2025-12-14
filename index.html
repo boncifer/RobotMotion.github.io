@@ -200,15 +200,26 @@
   </p>
 
   <!-- GIF goes here -->
-  <div class="twin-visual">
-    <img
-      src="assets/videos/digital_twins1.mp4"
-      alt="Digital twins of turning process"
-    />
-    <p class="twin-caption">
-      Example digital twin reconstructed from a robot arm.
-    </p>
+  <div class="twin-visual-grid">
+
+  <!-- Left: real-world demonstration -->
+  <div class="twin-item">
+    <video autoplay loop muted playsinline>
+      <source src="assets/videos/digital_twins1.mp4" type="video/mp4">
+    </video>
+    <p class="twin-caption">Real-world machine deployment</p>
   </div>
+
+  <!-- Right: digital twin / simulation -->
+  <div class="twin-item">
+    <video autoplay loop muted playsinline>
+      <source src="assets/videos/digital_twins2.mp4" type="video/mp4">
+    </video>
+    <p class="twin-caption">Warehouse digital twin & pathfinding</p>
+  </div>
+
+</div>
+
 
   <p class="note">
     Digital twins in RobotMotion are designed to capture task-relevant structure
