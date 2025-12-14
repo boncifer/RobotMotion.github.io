@@ -276,3 +276,34 @@ p {
   color: #555;
   margin-top: 6px;
 }
+
+/* === Digital Twins section === */
+
+.digital-twins {
+  margin: 60px 0;
+}
+
+.twin-visual {
+  max-width: 720px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.twin-visual img {
+  width: 100%;
+  max-width: 420px;   /* keeps it from being too big */
+  border-radius: 6px;
+  background: #000;
+}
+
+.twin-caption {
+  font-size: 0.85rem;
+  color: #555;
+  margin-top: 6px;
+}
+
+.note {
+  font-size: 0.85rem;
+  color: #555;
+  margin-top: 14px;
+}
