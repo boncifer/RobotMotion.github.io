@@ -7,6 +7,16 @@ html, body {
                Roboto, Helvetica, Arial, sans-serif;
 }
 
+html, body {
+  background: #0b0f14;
+}
+
+body, p, li {
+  color: #e0e3e8; /* light gray that works well on dark bg */
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
 .container {
   max-width: 1100px;
   margin: 40px auto;
@@ -16,26 +26,18 @@ html, body {
   box-shadow: 0 20px 50px rgba(0,0,0,0.55);
 }
 
-body {
-  color: #e6e8eb;
-}
-
-p, li {
-  color: #cfd6df;
-  line-height: 1.6;
-}
-
-h1, h2, h3 {
+h1, h2, h3, h4 {
   color: #ffffff;
+  font-weight: 600;
 }
 
 a {
-  color: #7aa2ff;
-  text-decoration: none;
+  color: #62aaff; /* bright blue that stands out */
+  text-decoration: underline;
 }
 
 a:hover {
-  text-decoration: underline;
+  color: #90c1ff;
 }
 
 .button {
@@ -483,6 +485,11 @@ p {
   color: #555;
 }
 
+.section-subtitle,
+.caption {
+  color: #c6cad3; /* softer light gray */
+}
+
 .dataset-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -511,11 +518,12 @@ p {
 }
 
 .code-snippet {
-  background: #111;
-  color: #dcdcdc;
+  background: #1f2836;
+  color: #e8e8e8;
   padding: 14px;
   border-radius: 8px;
-  font-size: 0.85rem;
+  font-size: 0.87rem;
+  line-height: 1.5;
   overflow-x: auto;
 }
 
