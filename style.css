@@ -355,3 +355,46 @@ p {
   background: #1a4cff;
   color: white;
 }
+
+.status {
+  margin: 60px auto;
+  max-width: 900px;
+  text-align: center;
+}
+
+.status h2 {
+  margin-bottom: 10px;
+}
+
+.status-note {
+  color: #555;
+  font-size: 0.95rem;
+  max-width: 700px;
+  margin: 0 auto 30px;
+}
+
+.status-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.status-item {
+  padding: 18px 12px;
+  border: 1px solid #e3e6ff;
+  border-radius: 8px;
+  background: #f8f9ff;
+}
+
+.status-value {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #1a4cff;
+  margin-bottom: 6px;
+}
+
+.status-label {
+  font-size: 0.9rem;
+  color: #444;
+}
