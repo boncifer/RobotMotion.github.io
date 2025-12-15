@@ -332,3 +332,26 @@ p {
   margin-top: 6px;
   text-align: center;
 }
+
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.button {
+  padding: 10px 18px;
+  border-radius: 6px;
+  border: 1px solid #cfd8ff;
+  background: #eef3ff;
+  color: #1a4cff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.button:hover {
+  background: #1a4cff;
+  color: white;
+}
