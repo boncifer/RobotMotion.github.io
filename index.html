@@ -213,6 +213,107 @@
     <li><strong>Teleoperation Data:</strong> Real humanoid robot executions captured via human-in-the-loop control.</li>
   </ul>
 </section>
+    
+<!-- Dataset Structure & Modalities -->
+<section id="dataset-structure" class="section">
+  <h2>Dataset Structure & Modalities</h2>
+  <p class="section-subtitle">
+    RobotMotion organizes heterogeneous data sources under a unified skill–episode abstraction,
+    enabling consistent access across human demonstrations, simulation, and teleoperation.
+  </p>
+
+  <div class="dataset-grid">
+
+    <!-- Human Data -->
+    <div class="dataset-column">
+      <h3>Human Demonstrations</h3>
+      <ul>
+        <li>Egocentric RGB / RGB-D video</li>
+        <li>Audio and task execution context</li>
+        <li>Natural, unconstrained environments</li>
+        <li>Optional visual annotations (segmentation, boxes, tracking)</li>
+      </ul>
+
+      <p class="caption">
+        Human data is organized by skill, each containing multiple video episodes
+        with standardized metadata.
+      </p>
+
+      <pre class="code-snippet">
+{
+  "skill_name": "pick_up_cup",
+  "episode_id": 2,
+  "video_type": "RGBD",
+  "video_dimension": "1280x720",
+  "video_fps": 30,
+  "annotation": {
+    "bounding_box": true,
+    "tracking_trajectory": true
+  }
+}
+      </pre>
+    </div>
+
+    <!-- Simulation Data -->
+    <div class="dataset-column">
+      <h3>Simulation Data</h3>
+      <ul>
+        <li>Large-scale skill generation in NVIDIA Isaac Sim</li>
+        <li>Perfect ground-truth annotations</li>
+        <li>Domain randomization (lighting, objects, dynamics)</li>
+        <li>Language-conditioned task descriptions</li>
+      </ul>
+
+      <p class="caption">
+        Simulation episodes provide synchronized state, action, and multi-sensor observations
+        with frame-level alignment.
+      </p>
+
+      <pre class="code-snippet">
+{
+  "simulator": "isaac_sim",
+  "total_episodes": 10000,
+  "trajectory_jsonl": "trajectory.jsonl",
+  "annotation": {
+    "object_6d_poses": true,
+    "pixel_level_segmentation": true
+  }
+}
+      </pre>
+    </div>
+
+    <!-- Teleoperation Data -->
+    <div class="dataset-column">
+      <h3>Teleoperated Robot Data</h3>
+      <ul>
+        <li>Real humanoid robot execution</li>
+        <li>Embodiment-aligned demonstrations</li>
+        <li>Synchronized proprioception and actions</li>
+        <li>Optional tactile and force sensing</li>
+      </ul>
+
+      <p class="caption">
+        Teleoperation data bridges human intent and robot embodiment,
+        enabling high-fidelity action learning.
+      </p>
+
+      <pre class="code-snippet">
+{
+  "robot_type": "unitree_g1",
+  "control_hz": 100,
+  "trajectory_jsonl": "trajectory.jsonl",
+  "annotation": "No"
+}
+      </pre>
+    </div>
+
+  </div>
+
+  <p class="footnote">
+    Full dataset schemas and detailed JSON specifications are available in the
+    <a href="docs/data_format.md">documentation</a>.
+  </p>
+</section>
 
 <!-- Data modalities -->
   <section>
