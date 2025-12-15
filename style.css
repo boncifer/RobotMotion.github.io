@@ -554,3 +554,24 @@ p {
 .dataset-column ul li {
   color: #cfd6df;               /* slightly softer bullets */
 }
+
+/* Global text defaults for dark background */
+body {
+  color: #e6e8eb;
+}
+
+/* Section paragraphs */
+section p {
+  color: #c7ced9;
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+/* Section descriptions (lighter, secondary text) */
+.section-description {
+  color: #aeb6c2;
+  font-size: 15px;
+  max-width: 900px;
+  margin: 0 auto 32px;
+  text-align: center;
+}
