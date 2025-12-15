@@ -532,3 +532,21 @@ p {
   text-align: center;
   font-size: 0.9rem;
 }
+
+.card,
+.card p,
+.card li,
+.card ul,
+.card h3,
+.card h4 {
+  color: #1a1a1a; /* dark text for light background */
+}
+
+.card ul {
+  padding-left: 20px;
+}
+
+.card li {
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
