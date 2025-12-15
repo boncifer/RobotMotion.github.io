@@ -73,13 +73,19 @@ section p {
 }
 
 .hero h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
+  font-size: 56px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+  color: #ffffff;
 }
 
 .subtitle {
-  font-size: 1.2rem;
-  margin-bottom: 25px;
+  font-size: 18px;
+  max-width: 760px;
+  margin: 0 auto 40px;
+  color: #b8c0cc;
+  line-height: 1.6;
 }
 
 .links a {
@@ -111,11 +117,15 @@ footer {
 }
 
 .hero {
+  background: radial-gradient(
+    1200px 400px at 50% -100px,
+    #1a2333 0%,
+    #0b0f14 70%
+  );
+  padding: 120px 20px 100px;
   text-align: center;
-  padding: 60px 20px;
-  background: #f9f9f9;
-  border-bottom: 1px solid #ddd;
 }
+
 
 .hero h1 {
   font-size: 3.2rem;
@@ -293,10 +303,6 @@ p {
   font-weight: 600;
 }
 
-.modality-table tbody tr:nth-child(even) {
-  background-color: #fafafa;
-}
-
 /* === Samples section === */
 
 .samples {
@@ -390,24 +396,25 @@ p {
   display: flex;
   justify-content: center;
   gap: 16px;
-  margin-top: 20px;
+  flex-wrap: wrap;
 }
 
 .button {
-  padding: 10px 18px;
-  border-radius: 6px;
-  border: 1px solid #cfd8ff;
-  background: #eef3ff;
-  color: #1a4cff;
+  padding: 12px 22px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+  font-weight: 600;
   text-decoration: none;
-  font-weight: 500;
   transition: all 0.2s ease;
 }
 
 .button:hover {
-  background: #1a4cff;
-  color: white;
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-1px);
 }
+
 
 .status {
   margin: 60px auto;
