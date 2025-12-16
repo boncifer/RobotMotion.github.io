@@ -512,6 +512,7 @@ p {
 }
 
 .code-snippet {
+  max-height: 360px;
   background: #1f2836;
   color: #e8e8e8;
   padding: 14px;
