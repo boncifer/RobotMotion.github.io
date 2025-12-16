@@ -484,23 +484,6 @@ p {
   color: #c6cad3; /* softer light gray */
 }
 
-
-
-.dataset-column {
-  border: 1px solid #e0e0e0;
-  border-radius: 12px;
-  padding: 24px;
-  background: #fafafa;
-}
-
-.dataset-column h3 {
-  margin-top: 0;
-}
-
-.dataset-column ul {
-  padding-left: 18px;
-}
-
 .caption {
   font-size: 0.9rem;
   color: #555;
@@ -542,24 +525,6 @@ p {
   line-height: 1.5;
 }
 
-/* === FIX CARD TEXT COLORS === */
-
-.dataset-column,
-.card {
-  background: #121a26;          /* dark card */
-  border: 1px solid #1f2a3a;
-}
-
-.dataset-column h3,
-.dataset-column p,
-.dataset-column li {
-  color: #e6e8eb;               /* readable text */
-}
-
-.dataset-column ul li {
-  color: #cfd6df;               /* slightly softer bullets */
-}
-
 /* Global text defaults for dark background */
 body {
   color: #e6e8eb;
@@ -586,41 +551,6 @@ section p,
 section li,
 section ul {
   color: #cfd6e1 !important;
-}
-
-/* ===== Dataset 3-column layout ===== */
-
-/* Each column/card */
-.dataset-column {
-  background: #0f172a;            /* dark card */
-  border-radius: 14px;
-  padding: 22px;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
-}
-
-/* Titles */
-.dataset-column h3 {
-  margin-bottom: 12px;
-  color: #ffffff;
-}
-
-/* Bullet text */
-.dataset-column ul {
-  margin: 0 0 14px 18px;
-  color: #cbd5e1;
-}
-
-.dataset-column li {
-  margin-bottom: 6px;
-}
-
-/* Caption text */
-.dataset-column .caption {
-  color: #94a3b8;
-  font-size: 0.95rem;
-  margin-bottom: 12px;
 }
 
 /* ===== Code snippets (THIS IS THE KEY) ===== */
@@ -656,12 +586,34 @@ section ul {
 }
 
 .dataset-column {
-  background: rgba(255, 255, 255, 0.04);  /* subtle card */
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #121a26;
+  border: 1px solid #1f2a3a;
   border-radius: 14px;
   padding: 24px;
   display: flex;
   flex-direction: column;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
 }
+
+.dataset-column h3 {
+  margin-bottom: 12px;
+  color: #ffffff;
+}
+
+.dataset-column ul {
+  margin: 0 0 14px 18px;
+  color: #cbd5e1;
+}
+
+.dataset-column li {
+  margin-bottom: 6px;
+}
+
+.dataset-column .caption {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+
 
 
