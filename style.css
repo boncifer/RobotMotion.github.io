@@ -484,11 +484,7 @@ p {
   color: #c6cad3; /* softer light gray */
 }
 
-.dataset-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-}
+
 
 .dataset-column {
   border: 1px solid #e0e0e0;
@@ -593,12 +589,6 @@ section ul {
 }
 
 /* ===== Dataset 3-column layout ===== */
-.dataset-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
-  align-items: stretch;
-}
 
 /* Each column/card */
 .dataset-column {
@@ -657,6 +647,7 @@ section ul {
   background: #334155;
   border-radius: 6px;
 }
+
 .dataset-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -665,12 +656,12 @@ section ul {
 }
 
 .dataset-column {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(255, 255, 255, 0.04);  /* subtle card */
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 14px;
   padding: 24px;
+  display: flex;
+  flex-direction: column;
 }
+
 
