@@ -245,16 +245,39 @@
 
       <pre class="code-snippet">
 {
+  "skill_id": 1,
   "skill_name": "pick_up_cup",
-  "episode_id": 2,
-  "video_type": "RGBD",
-  "video_dimension": "1280x720",
-  "video_fps": 30,
-  "annotation": {
-    "bounding_box": true,
-    "tracking_trajectory": true
-  }
+  "skill_description": "Pick up a cup from a table or flat surface using one hand",
+  "total_episodes": 45,
+  "episodes": [
+    {
+      "episode_id": 1,
+      "video_type": "RGB",
+      "video_dimension": "1280x720",
+      "video_fps": 30,
+      "video_depth": false,
+      "frame_count": 298,
+      "video_path": "videos/pick_up_cup/1.mp4",
+      "annotation": "No"
+    },
+    {
+      "episode_id": 2,
+      "video_type": "RGBD",
+      "video_dimension": "640x480",
+      "video_fps": 30,
+      "video_depth": true,
+      "frame_count": 315,
+      "video_path": "videos/pick_up_cup/2.mp4",
+      "annotation": {
+        "pixel_level_segmentation": true,
+        "bounding_box": true,
+        "tracking_trajectory": true,
+        "annotation_path": "annotations/pick_up_cup/2.json"
+      }
+    }
+  ]
 }
+
       </pre>
     </div>
 
@@ -275,14 +298,68 @@
 
       <pre class="code-snippet">
 {
-  "simulator": "isaac_sim",
+  "skill_id": 1,
+  "skill_name": "pick_up_cup",
+  "skill_description": "Grasp and lift randomized cups from tables in diverse simulated environments.",
   "total_episodes": 10000,
-  "trajectory_jsonl": "trajectory.jsonl",
-  "annotation": {
-    "object_6d_poses": true,
-    "pixel_level_segmentation": true
-  }
+  "sim_config": {
+    "simulator": "isaac_sim",
+    "robot_uid": "unitree_g1_sim_2025",
+    "robot_type": "unitree_g1",
+    "dof_summary": {
+      "arms": 14,
+      "legs": 15,
+      "hands": 14,
+      "total": 43
+    },
+    "core_sensors": [
+      "RGB cameras",
+      "proprioception (joint states, IMU, odometry)"
+    ],
+    "optional_sensors": [
+      "depth camera",
+      "LiDAR",
+      "tactile sensors"
+    ],
+    "control_hz": 100,
+    "default_camera_hz": 30,
+    "default_lidar_hz": 10,
+    "default_tactile_hz": 100,
+    "domain_randomization": true,
+    "sync_note": "All modalities synchronized via frame index and timestamps."
+  },
+  "episodes": [
+    {
+      "episode_id": 1,
+      "language_instruction": "Locate the cup, grasp it with the right hand, and lift it stably.",
+      "episode_stats": {
+        "duration_seconds": 15.0,
+        "timesteps": 1500,
+        "start_timestamp": 0.0,
+        "end_timestamp": 15.0
+      },
+      "data_paths": {
+        "trajectory_jsonl": "sim_episodes/pick_up_cup/1/trajectory.jsonl",
+        "cameras": [
+          {
+            "camera_id": "head_front",
+            "type": "RGBD",
+            "path_template": "sim_episodes/pick_up_cup/1/frame_{index:06d}"
+          }
+        ]
+      },
+      "annotation": {
+        "pixel_level_segmentation": true,
+        "bounding_box": true,
+        "object_tracking": true,
+        "object_6d_poses": true,
+        "tactile_contact_labels": true,
+        "annotation_path": "sim_episodes/pick_up_cup/1/annotations.json"
+      }
+    }
+  ]
 }
+
       </pre>
     </div>
 
@@ -303,11 +380,70 @@
 
       <pre class="code-snippet">
 {
-  "robot_type": "unitree_g1",
-  "control_hz": 100,
-  "trajectory_jsonl": "trajectory.jsonl",
-  "annotation": "No"
+  "skill_id": 1,
+  "skill_name": "pick_up_cup",
+  "skill_description": "Grasp and lift a cup or similar object from a table using one or both hands while maintaining whole-body balance.",
+  "total_episodes": 150,
+  "robot_config": {
+    "robot_uid": "unitree_g1_v2025",
+    "robot_type": "g1 from unitree",
+    "dof_summary": {
+      "arms": 14,
+      "legs": 15,
+      "hands": 14,
+      "total": 43
+    },
+    "core_sensors": [
+      "RGB camera(s)",
+      "proprioception (joint states, IMU, odometry)"
+    ],
+    "optional_sensors": [
+      "depth camera",
+      "LiDAR",
+      "tactile pressure sensors on hands"
+    ],
+    "control_hz": 100,
+    "default_camera_hz": 30,
+    "default_lidar_hz": 10,
+    "default_tactile_hz": 100,
+    "sync_note": "All modalities synchronized via Unix timestamps."
+  },
+  "calibration": {
+    "camera_intrinsics_path": "calibration/camera_intrinsics.json",
+    "sensor_extrinsics_path": "calibration/sensor_to_robot_base_extrinsics.json",
+    "camera_lidar_extrinsics_path": "calibration/camera_to_lidar_extrinsics.json"
+  },
+  "episodes": [
+    {
+      "episode_id": 1,
+      "language_instruction": "Use your right hand to locate and firmly grasp the cup on the table, then lift it while maintaining balance.",
+      "episode_stats": {
+        "duration_seconds": 15.0,
+        "timesteps": 1500,
+        "start_timestamp": 1751489000.123456,
+        "end_timestamp": 1751489015.123456
+      },
+      "data_paths": {
+        "trajectory_jsonl": "episodes/pick_up_cup/1/trajectory.jsonl",
+        "cameras": [
+          {
+            "camera_id": "head_front",
+            "type": "RGB",
+            "path_template": "episodes/pick_up_cup/1/color/frame_{index:06d}.jpg"
+          },
+          {
+            "camera_id": "head_front",
+            "type": "RGBD",
+            "path_template": "episodes/pick_up_cup/1/depth/frame_{index:06d}.npy"
+          }
+        ],
+        "lidar_pcd": "episodes/pick_up_cup/1/lidar/{timestamp}.pcd"
+      },
+      "annotation": "No"
+    }
+  ]
 }
+
       </pre>
     </div>
 
