@@ -591,3 +591,70 @@ section li,
 section ul {
   color: #cfd6e1 !important;
 }
+
+/* ===== Dataset 3-column layout ===== */
+.dataset-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  align-items: stretch;
+}
+
+/* Each column/card */
+.dataset-column {
+  background: #0f172a;            /* dark card */
+  border-radius: 14px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+
+/* Titles */
+.dataset-column h3 {
+  margin-bottom: 12px;
+  color: #ffffff;
+}
+
+/* Bullet text */
+.dataset-column ul {
+  margin: 0 0 14px 18px;
+  color: #cbd5e1;
+}
+
+.dataset-column li {
+  margin-bottom: 6px;
+}
+
+/* Caption text */
+.dataset-column .caption {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+
+/* ===== Code snippets (THIS IS THE KEY) ===== */
+.code-snippet {
+  margin-top: auto;              /* pushes code to bottom */
+  height: 280px;                 /* SAME height for all */
+  overflow-y: auto;
+  background: #020617;
+  color: #e5e7eb;
+  border-radius: 10px;
+  padding: 16px;
+  font-size: 13px;
+  line-height: 1.45;
+  white-space: pre;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.05);
+}
+
+/* Scrollbar polish (optional but nice) */
+.code-snippet::-webkit-scrollbar {
+  width: 6px;
+}
+
+.code-snippet::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 6px;
+}
+
