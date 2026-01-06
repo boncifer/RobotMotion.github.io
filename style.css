@@ -218,9 +218,12 @@ p {
 
 /* === Paired demo layout === */
 
-.paired-demo {
-  margin: 50px 0;
+.paired-demo .task-title {
+  max-width: 760px;        /* SAME as .paired-videos */
+  margin: 0 auto 18px;    /* center + spacing */
   text-align: center;
+  font-size: 0.95rem;
+  color: #cfd6e1;
 }
 
 .paired-videos {
